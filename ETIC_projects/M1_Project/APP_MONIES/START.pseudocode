@@ -1,0 +1,3 @@
+importar MAIN_MENU como app
+
+app.landingPage()
