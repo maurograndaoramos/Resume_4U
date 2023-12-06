@@ -1,0 +1,150 @@
+importar BULK_CODE como funcionalidade
+
+#A maioria deste file é menus. É só para distribuir jogo e andar de um lado para o outro de forma intuítiva.
+
+
+funcao landingPage()
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║ (1) ADICIONAR MOVIMENTOS         ║
+║ (2) VER MOVIMENTOS               ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
+    entrada("
+╔══════════════════════════════════╗
+║    Insere opção:_                ║
+╚══════════════════════════════════╝" + key)
+            se key == 1
+                funcionalidade.addMenu()
+            se key == 2
+                funcionalidade.viewMenu()
+            se key == 3
+                crash("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║      OBRIGADO POR UTILIZAR       ║
+║           A NOSSA APP            ║
+║                                  ║
+╚══════════════════════════════════╝")
+            se key = 4
+                funcionalidade.fml()
+            senao  
+                imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║     INSIRA UMA OPÇÃO VÁLIDA      ║
+║ (1) ADICIONAR MOVIMENTOS         ║
+║ (2) VER MOVIMENTOS               ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
+
+funcao addMenu()
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║ (1) ADICIONAR CRÉDITO     +$     ║
+║ (2) ADICIONAR DÉBITO      -$     ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
+    entrada("
+╔══════════════════════════════════╗
+║    Insere opção:_                ║
+╚══════════════════════════════════╝" + key)
+        enquanto key != 3
+            se key == 1
+                funcionalidade.registarMovimentoIncome()
+            se key == 2
+                funcionalidade.registarMovimentoExpense()
+            senao
+                imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║     INSIRA UMA OPÇÃO VÁLIDA      ║
+║ (1) ADICIONAR CRÉDITO     +$     ║
+║ (2) ADICIONAR DÉBITO      -$     ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
+                
+
+funcao viewMenu()
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║ (1) VER EXTRACTO     (GLOBAL)    ║
+║ (1) TOTAL MOVIMENTOS (CATEGORIA) ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
+    entrada("
+╔══════════════════════════════════╗
+║    Insere opção:_                ║
+╚══════════════════════════════════╝" + key)
+        enquanto key != 3
+            se key == 1
+                funcionalidade.extractoMovimentosGlobais()
+            se key == 2
+                funcionalidade.extractoPorCategoria()
+            senao
+                imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║     INSIRA UMA OPÇÃO VÁLIDA      ║
+║ (1) VER EXTRACTO     (GLOBAL)    ║
+║ (1) TOTAL MOVIMENTOS (CATEGORIA) ║
+║ (3) EXIT                         ║
+║                                  ║
+╚══════════════════════════════════╝")
