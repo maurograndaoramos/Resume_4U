@@ -4,14 +4,14 @@ Mauro Ramos
 -------------------     ----------------------------
 Send me an email:             [mauro.dgramos@gmail.com](mailto:ymauro.dgramos@gmail.com)
 // Check my linkedIn:       [maurograndaoramos](https://www.linkedin.com/in/maurograndaoramos/)
-Or just reach out:                   (+351)962 169 416
+// Or just reach out:                   (+351)962 169 416
 -------------------     ----------------------------
 
 Education
 ---------
 
 2008-2011
-:   **técnico de Multimédia**; Secundária de Silves
+:   **Técnico de Multimédia**; Secundária de Silves
 
 2013-2016
 :   **BSc, Psicologia e Neuropsicologia**; Universidade Lusófona
