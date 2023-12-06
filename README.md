@@ -20,9 +20,9 @@ Feel free to clone any project you find interesting and dive into the code. If y
 
 ## Contact
 
-- **Email:** [your.email@example.com](mailto:ymauro.dgramos@gmail.com)
-- **LinkedIn:** [Your Name](https://www.linkedin.com/in/maurograndaoramos/)
-- **Portfolio Website: [PENDING}** [yourportfolio.com](https://github.com/maurograndaoramos/Resume_4U) - Will redirect you back to here, at least until I get my own hosted page going.
+- **Email:** [mauro.dgramos@gmail.com](mailto:ymauro.dgramos@gmail.com)
+- **LinkedIn:** [Mauro Ramos](https://www.linkedin.com/in/maurograndaoramos/)
+- **Portfolio Website: [PENDING}** [Current Github Page](https://github.com/maurograndaoramos/Resume_4U) - Will redirect you back to here, at least until I get my own hosted page going.
 
 Thank you for visiting my **Resume** repository, made **4_U**. I appreciate your interest and look forward to sharing my coding adventures with you!
 
