@@ -5,9 +5,9 @@ This is where you'll find all fancy projects created during my PW23/25 course. I
 
 ## ETIC_Eats
 
-**ETIC_Eats** is an app written in [Pseudocode](XXXXXX) (this specific version, created by [XXXXXXX](XXXXXX)) during the first module of PW23/25. It was the first group Project during "Programação 1" and I'm particularly proud of what we've done here. Specifically, loved it for the team's efficiency and for the team's cohesion.
+**ETIC_Eats** is an app written in [Pseudoscript](https://github.com/jorgealves/pseudoscript) (taught by [Jorge Alves](https://github.com/jorgealves)) during the first module of PW23/25. It was the first group Project during "Programação 1" and I'm particularly proud of what we've done here. Specifically, loved it for the team's efficiency and for the team's cohesion.
 
-The team structure was composed of your's truly, as well as [XXXXXXX](XXXXXX), [XXXXXXX](XXXXXX), [XXXXXXX](XXXXXX), [XXXXXXX](XXXXXX), [XXXXXXX](XXXXXX), [XXXXXXX](XXXXXX) - You should pay them a visit yourself and see what these wonderful people have to offer.
+The team structure was composed of your's truly, as well as [Jessie](https://github.com/Jessiellen), [Santiago](https://github.com/Spereira05), [Rafael](https://github.com/raphaelmatiaz), [João](https://github.com/JoaoCardosoDev), [Ricardo](https://github.com/ricardoAlmeidaEtic), [Miguel](https://github.com/Soninho3) - You should pay them a visit yourself and see what these wonderful people have to offer.
 
 ## M1_Project
 
