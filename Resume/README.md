@@ -2,9 +2,9 @@ Mauro Ramos
 ============
 
 -------------------     ----------------------------
-Send me an email             mauro.dgramos@gmail.com
-Check my linkedIn       [maurograndaoramos](https://www.linkedin.com/in/maurograndaoramos/)
-Or just Reach out                  (+351)962 169 416
+Send me an email:             [mauro.dgramos@gmail.com](mailto:ymauro.dgramos@gmail.com)
+// Check my linkedIn:       [maurograndaoramos](https://www.linkedin.com/in/maurograndaoramos/)
+Or just reach out:                   (+351)962 169 416
 -------------------     ----------------------------
 
 Education
