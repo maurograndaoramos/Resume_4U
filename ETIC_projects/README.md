@@ -1,4 +1,4 @@
-# My Coding Journey Portfolio
+# ETIC Projects
 
 Welcome to my **Resume4U ETIC_Projects!** 
 This is where you'll find all fancy projects created during my PW23/25 course. It'll give you great insight into my general growth and learning process.
@@ -22,6 +22,5 @@ And here, I'll share in advance, you'll find that my **Personal Project** for "P
 
 
 Hope you liked my bby's first coding experiences. They're only but the start!
-Keep on rollin'
-[Mauro Ramos]
 
+Keep on rollin'
