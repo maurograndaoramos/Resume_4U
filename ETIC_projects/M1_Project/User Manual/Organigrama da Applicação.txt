@@ -1,0 +1,16 @@
+        - MAIN MENU
+                - MOVEMENTS
+                    - ADD MOVEMENT (INCOME)
+                        - Insert Income Value
+                            - Category
+                            - Descrição
+                    - ADD MOVEMENT (EXPENSE)
+                        - Insert Expense Value
+                            - (See above for Cats and descrição)
+                - DISPLAY MOVIMENTOS
+                    - MOVIMENTOS GLOBAIS
+                        - PRINT ALL 
+                    - MOVIMENTOS CATEGORIAS            
+                        - PRINT TOTAL POR CATEGORIA
+                        - PRINT TOTAL DE TODOS OS TOTAIS
+                

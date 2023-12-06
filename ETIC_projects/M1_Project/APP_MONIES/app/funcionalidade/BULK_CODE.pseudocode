@@ -1,0 +1,205 @@
+Modelo Movimento:               
+#Definir o modelo que vou usar para representar um movimento de valores
+    constructor(valor, tipoINCOME, categoria, descricao):
+        valor = 0.00
+        tipoINCOME = verdadeiro
+        categoria = ""
+        descricao = ""      
+#Inicializar listas para armazenar os movimentos, tanto de cada movimento ou de todos os movimentos por categoria. More on that SNAFU a bit later 😂
+
+movementTracker = []
+movementsPorCategoria = []     
+
+funcao registarMovimentoIncome(valor, categoria, descricao):                    
+#Função para registar créditos. Chamei-lhe INCOME inicialmente mas pronto, tá mais Português assim. Quer dizer, nem por isso, que Português não recebe dinheiro nenhum.
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║             CRÉDITO              ║
+║  Insira a informação necessária  ║
+║                                  ║
+╚══════════════════════════════════╝")
+    entrada("
+╔══════════════════════════════════╗    
+║  Montante do movimento?:________ ║
+╚══════════════════════════════════╝", valor)
+    entrada("
+╔══════════════════════════════════╗
+║  Qual é a categoria?:___________ ║
+╚══════════════════════════════════╝", categoria)
+    entrada("
+╔══════════════════════════════════╗
+║  Insere uma descrição:__________ ║
+╚══════════════════════════════════╝", descricao)
+    movimento.valor = valor
+    movimento.categoria = categoria
+    movimento.descricao = descricao
+    movimento = movementTracker[]+1
+    movementTrackers.adicionar(movimento)
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║  Crédito registrado com sucesso  ║
+║                                  ║
+╚══════════════════════════════════╝")
+
+funcao registarMovimentoExpense(valor, tipoINCOME, categoria, descricao):                    
+#Função para registar débitos. Chamei-lhe EXPENSE inicialmente, mas same same as before. Só que estes a gente já tem a mais. 😢
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║             DÉBITO               ║
+║  Insira a informação necessária  ║
+║                                  ║
+╚══════════════════════════════════╝")
+    entrada("
+╔══════════════════════════════════╗    
+║  Montante do movimento?:________ ║
+╚══════════════════════════════════╝", valor)
+    entrada("
+╔══════════════════════════════════╗
+║  Qual é a categoria?:___________ ║
+╚══════════════════════════════════╝", categoria)
+    entrada("
+╔══════════════════════════════════╗
+║  Insere uma descrição:__________ ║
+╚══════════════════════════════════╝", descricao)
+    movimento.tipoINCOME = falso
+    movimento.valor = montante
+    movimento.categoria = categoria
+    movimento.descricao = descricao
+    movimento = movementTracker[]+1
+#Adiciona um index vazio ao movementTracker
+    movementTrackers.adicionar(movimento)
+#E adiciona lá dentro o modelo Movimento que acabamos de preencher com esta função :D
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║
+║   Débito registrado com sucesso  ║
+║                                  ║
+╚══════════════════════════════════╝")
+
+funcao extractoMovimentosGlobais():                
+#Função para visualizar todos os movimentos feitos até à data, tipo um extracto da conta
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║")          
+    se movementTracker.tamanho() == 0
+#Isto só serve para verificar se há alguma coisa lá dentro. 
+        imprime("
+║   Nenhum movimento registrado    ║")
+
+    senao:
+        por cada i em movementTrackers 
+            imprime("
+║  Montante: {i.valor} / Categoria: {i.categoria}  ║ 
+║  Descrição: {i.descricao} - é " + ( se i.tipoINCOME: "Crédito  ║" senao !i.tipoINCOME: "Débito  ║"))
+    imprime:("
+║                                  ║
+╚══════════════════════════════════╝")
+       
+funcao extractoPorCategoria():                    
+#Funcão para visualizar um resumo de gastos, por Categoria e no Total - Vou desde já admitir: isto foi preciso 6 horas de ler código, ver videos de estrutura de loops within loops como funcionam Dicionários em JS e PY e AINDA ter uma videochamada com um amigo para ele me chamar de burro e ajudar a desenlaçar aqui o problema
+    imprime("
+╔══════════════════════════════════╗
+║  __  __             _            ║
+║ |  \/  |           (_)           ║
+║ | \  / | ___  _ __  _  ___  ___  ║
+║ | |\/| |/ _ \|  _ \| |/ _ \/ __| ║
+║ | |  | | (_) | | | | |  __/\__ \ ║
+║ |_|  |_|\___/|_| |_|_|\___||___/ ║
+║                                  ║
+║                                  ║")
+    cada i em movementTrackers:
+        se movementsPorCategoria inclui i.categoria             
+#Serve para dar Skip à entrada da categoria já existente no movementsPorCategoria. Not super sure se posso usar o "Includes" de JS mas epá, at this point... 😊🔫
+        senao
+            movementsPorCategoria.adicionar(categoria)           
+#Serve para adicionar 1 chave com o nome da categoria ao dicionário
+    cada categoria em movementsPorCategoria:
+        cada movimento em movementTrackers
+            se movimento.categoria == categoria
+                movementsPorCategoria.categoria.adicionar(movementTrackers.movimento.valor)
+#Serve para adicionar todos os valores dentro da chave movimento.valor no dicionário movementTrackers dentro da chave com o nome da Categoria dentro de movementsPorCategoria
+    cada categoria em movementsPorCategoria
+#Este aqui serve para adicionar e remover valores ao totalDeMovimentos para teres uma soma dos values que inseriste antes no dicionário original
+        totalDeMovimentos = 0;
+        cada movimento em categoria
+            se movimento.tipo == true 
+                totalDeMovimentos += movimento.valor
+            se movimento.tipo == false
+                totalDeMovimentos -= movimento.valor
+            cada categoria em movementsPorCategoria
+                imprime("║ Movimentos da categoria {i.categoria}, total de {i.totalDeMovimentos} ║")
+#Este por si serve para adicionar e remover valores ao totalDeTodosMovimentos para teres uma soma dos valores totais de todas as categorias
+                totalDeTodosMovimentos = 0;
+                cada movimento em categoria
+                    totalDeTodosMovimentos += totalDeMovimentos
+            imprime("║ O total de todas as categorias é {i.totalDeTodosMovimentos} ║")
+            #Honestly, eu acho que isto vai dar b**ta
+            #Well, oops! :D
+    imprime:("
+║                                  ║
+╚══════════════════════════════════╝")
+
+funcao fml()
+#fml
+    imprime("
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠖⠊⠉⠉⠉⠉⠉⠉⠙⠒⠢⠤⣄⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣳⣤⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⣰⠚⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢏⠁⠀
+⠀⠀⠀⠀⠀⠘⣻⠟⠀⠀⠀⠀⢀⣰⣄⡀⢶⣤⣀⠀⢠⣀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡀
+⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⢠⡞⠁⠀⠉⠉⠛⠛⠛⠲⣽⡟⠲⣄⠀⠀⠀⠀⠀⠀⣧
+⠀⠀⠀⠀⢀⡇⠀⠀⠀⢠⣷⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠀⠈⠳⡄⠀⣄⠀⠀⢸
+⠀⠀⠀⠀⢸⠀⠀⣀⣀⡏⠈⠿⠀⠀⠀⣠⠖⠒⢦⠀⠀⠀⠀⠀⢀⣀⠹⣤⠟⣆⢀⡟
+⠀⠀⠀⠀⢸⠀⡼⢙⣉⡻⠄⠀⠀⠀⡼⠁⢀⣤⣼⡇⠀⠀⠀⣴⠋⠉⢻⠋⣰⣻⡞⠀
+⠀⠀⠀⠀⢸⡀⡇⢸⣹⡇⠀⠀⠀⠰⠧⠤⢼⣿⡿⠀⠀⠀⢰⡇⠀⣶⣾⠀⡇⠏⠀⠀
+⠀⠀⠀⠀⠈⢇⠹⣄⠻⠇⠀⠀⠀⠀⠀⣦⠀⠀⠀⠀⠀⠀⠀⠉⢹⡛⠋⢠⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠣⣈⣻⠂⠀⠀⠀⠀⢸⣹⡇⠀⠀⠀⠀⠀⠀⠀⡞⡇⠀⣸⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠀⣸⡀⠀⠈⠉⠀⠀⣀⣀⡀⠀⠀⠈⠷⠃⢠⠇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⡏⡇⠀⠀⠀⠖⠛⠛⠛⠿⠷⣄⠀⠀⢠⣏⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠿⢷⢤⣄⣀⠀⠀⠀⠀⠀⠀⣀⣤⠞⠁⡿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⣤⡖⠛⠉⠹⡄⠀⠘⣆⠀⠈⠉⠉⠉⠉⠉⠉⡟⢳⣄⠰⠿⠃⠀⠀⠀⠀
+⠀⢀⡴⠚⠉⠉⠉⠙⠲⣄⠹⣄⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⡇⠀⢿⢶⠦⣄⡀⠀⠀⠀
+⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠻⡝⢦⡀⠈⠳⢤⡀⠀⠀⢀⡼⠀⢀⡟⠈⡆⠀⠹⡄⠀⠀
+⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⠀⠙⠢⣄⡀⠈⠉⠉⠁⢀⣠⠞⠁⠀⢸⠀⠀⣇⠀⠀
+⢸⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣞⣀⣀⣀⣀⣈⣉⣙⣛⣉⣉⣀⣀⣀⣀⣸⣀⠀
+⢸                                   ⡇⠀
+⢸       CUT MY LIFE INTO PIECES     ⡇
+⢸⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡇
+")
